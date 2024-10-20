@@ -61,7 +61,7 @@ h2{
     background-color: #fff;
 
     font-size: 70px;
-    transform: rotatey(180deg);
+    transform: rotateY(180deg);
     transition: 0.25s;
 }
 
@@ -69,12 +69,11 @@ h2{
     content: "";
     position: absolute;
     inset: 0;
-    background: #404040;
+    background: url('https://www.google.com/search?sca_esv=bc957982f2bbd7ba&sxsrf=ADLYWIJmR6dlep-gfvrp3OXyM_HGyXvF2g:1729401243957&q=alimenta%C3%A7%C3%A3o+saudavel+jogo+da+memoria&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7d31kUTou4HA_83bkdbPSVokCXZjh4eMAQQBgtU4j_z2RZsAwg9tl3rn5IEYtfP-fK7Z7BgA8wqWsihrQug_YV7dDbKcVxw2vjpm9FuaS6W4ndfKlmoDEDgT9ynJj0Pj0WNIzALT83kwkbn4Jlkz34KhE4plw&udm=2&sa=X&ved=2ahUKEwjSysfWmZyJAxW-rJUCHWU2E3MQxKsJegQIDBAB&ictx=0&biw=718&bih=695&dpr=1.25#vhid=IFj2zt6no8Cq8M&vssid=mosaic');
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
     user-select: none;
-    opacity: 70%;
 }
 .item.boxOpen{
     transform: rotateY(0deg);
