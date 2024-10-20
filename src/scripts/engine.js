@@ -1,3 +1,43 @@
+if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", ready)
+}else{
+    ready()
+}
+function ready(){
+    const modal = document.getElementsByClassName('bottomModal')[0]
+    const boxModal = document.createElement('div')
+    boxModal.classList.add('modal')
+    boxModal.innerHTML = 
+    `   <p id="txtModal">Quantos jogadores?</p>
+        <input type="number" value="3" id="inputModal">
+        <button type="button" id="buttonModal">começar</button>`
+    modal.appendChild(boxModal)
+    readInput()
+}
+function readInput(){
+    document.getElementById('buttonModal').addEventListener('click', ()=>{
+        const n = document.getElementById('inputModal').value
+        const modal = document.getElementsByClassName('bottomModal')[0]
+        modal.style.display = 'none'
+        numPlayer(n)
+    })
+}
+function numPlayer(n){
+    const player = document.getElementsByClassName('player')[0]
+    for(var i = 0;i < n;i++){
+        const newPlayer = document.createElement('div')
+        newPlayer.classList.add('jogador')
+        newPlayer.innerHTML = 
+        `
+         jogador ${[i+1]}|
+            <span class="pontos">
+                0
+            </span>
+        `
+        player.appendChild(newPlayer)        
+    }
+    
+}
 const emojis = [
     "❤️","❤️","😒","😒","🤡","🤡","😽","😽",
     "🐸","🐸","🦄","🦄","🐬","🐬","💵","💵"
